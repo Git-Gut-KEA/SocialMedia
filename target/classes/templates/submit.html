@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="/new-post">
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title" placeholder="title">
+
+    <label for="content">Content</label>
+    <input type="text" name="content" id="content" placeholder="content">
+
+    <label for="number-of-cats">Number of cats</label>
+    <input type="number" name="number-of-cats" id="number-of-cats" placeholder="number of cats">
+
+    <label for="date">Date</label>
+    <input type="date" name="date" id="date">
+
+    <input type="radio" name="visibility" value="public">Public
+    <input type="radio" name="visibility" value="private">Private
+
+    <button type="submit">Post</button>
+</form>
+
+</body>
+</html>
