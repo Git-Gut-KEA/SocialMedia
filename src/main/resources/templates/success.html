@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Success!</title>
+</head>
+<body>
+<h1>Success!</h1>
+
+<ul>
+    <div th:each="submit: ${latestSubmit}" class="posts">
+        <li th:text="${submit.title}"></li>
+        <li th:text="${submit.content}"></li>
+        <li th:text="${submit.numberOfCats}"></li>
+        <li th:text="${submit.date}"></li>
+        <li th:text="${submit.visibility}"></li>
+    </div>
+
+    <a href="/dashboard">
+        <button>Return to dashboard</button>
+    </a>
+</ul>
+
+</body>
+</html>
