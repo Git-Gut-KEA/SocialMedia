@@ -35,6 +35,11 @@ public class FormExample {
         return "redirect:/success";
     }
 
+    @GetMapping("/")
+    public String index(){
+        return "index.html";
+    }
+
     @GetMapping(value = "/success")
     public String success(Model model){
 
@@ -45,11 +50,6 @@ public class FormExample {
 
     @GetMapping(value = "/dashboard")
     public String dashboard(Model model){
-
-        if(latestSubmit.size() > 0){
-            latestSubmit.remove(0);
-        }
-
         model.addAttribute("submits", submits);
 
         return "dashboard.html";
