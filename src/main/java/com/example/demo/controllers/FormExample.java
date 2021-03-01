@@ -11,12 +11,15 @@ import java.util.ArrayList;
 
 @Controller
 public class FormExample {
+String page = "";
 
     ArrayList<PostTemplate> submits = new ArrayList<>();
     ArrayList<PostTemplate> latestSubmit = new ArrayList<>();
     // Showing how to create a form using thymeleaf
     @GetMapping(value = "/submit")
-    public String renderForm() {
+    public String renderForm(Model model) {
+        page = "submit";
+        model.addAttribute("currentPage", page);
         return "submit";
     }
 
@@ -36,13 +39,15 @@ public class FormExample {
     }
 
     @GetMapping("/")
-    public String index(){
+    public String index(Model model){
+        page="home";
+        model.addAttribute("currentPage", page);
         return "index.html";
     }
 
+
     @GetMapping(value = "/success")
     public String success(Model model){
-
         model.addAttribute("submits", submits);
         model.addAttribute("latestSubmit", latestSubmit);
         return "success.html";
@@ -50,8 +55,9 @@ public class FormExample {
 
     @GetMapping(value = "/dashboard")
     public String dashboard(Model model){
+        page="dashboard";
         model.addAttribute("submits", submits);
-
+        model.addAttribute("currentPage", page);
         return "dashboard.html";
     }
 }

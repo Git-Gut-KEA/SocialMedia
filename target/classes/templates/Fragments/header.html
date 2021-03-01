@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<header>
+    <nav>
+        <ul>
+            <a th:href="@{/}"><li th:classappend="${currentPage=='home' ? 'bold':''}">Home</li></a>
+            <a th:href="@{/submit}"><li th:classappend="${currentPage=='submit' ? 'bold':''}">Submit</li></a>
+            <a th:href="@{/dashboard}"><li th:classappend="${currentPage=='dashboard' ? 'bold':''}">Dashboard</li></a>
+        </ul>
+    </nav>
+</header>
+</html>
