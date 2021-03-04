@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link th:href="@{/styles/style.css}" rel="stylesheet" />
+</head>
+<body>
+
+
+
+        <ul>
+            <div th:each="submit: ${submits}" class="posts">
+                <li th:text="${submit.title}"></li>
+                <li th:text="${submit.content}"></li>
+                <li th:text="${submit.numberOfCats}"></li>
+                <li th:text="${submit.date}"></li>
+                <li th:text="${submit.visibility}"></li>
+            </div>
+        </ul>
+
+    <a href="/submit">
+        <button>Submit post</button>
+    </a>
+
+</body>
+</html>

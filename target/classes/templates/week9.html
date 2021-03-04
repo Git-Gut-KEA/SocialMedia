@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Week9</title>
+
+</head>
+<body>
+
+
+<a th:href="@{/dashboard}">Website</a>
+
+<td>
+    <span th:if="${isUserLoggedIn}"><p>Welcome Back!</p></span>
+    <span th:if="${!isUserLoggedIn}"><p>Please log in</p></span>
+</td>
+
+<td th:switch="${userType}">
+    <span th:case="free">Consider paying</span>
+    <span th:case="paying" >Consider upgrading to premium</span>
+    <span th:case="premium" >We hope you are happy with your account</span>
+    <span th:case="*" >Something went wrong tracking your user type</span>
+</td>
+
+</body>
+</html>
