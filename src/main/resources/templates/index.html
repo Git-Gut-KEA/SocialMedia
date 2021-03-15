@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Kattenetværket</title>
-</head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="Fragments/head.html(pageTitle='Kattenetværket - Home')"></head>
+
 <body>
+
+<header th:replace="Fragments/header.html"></header>
 
 <h1>Kattenetværket</h1>
 <a href="/submit">
@@ -14,6 +15,8 @@
 <a href="/dashboard">
     <button>Dashboard</button>
 </a>
+
+<footer th:replace="Fragments/footer.html"></footer>
 
 </body>
 </html>

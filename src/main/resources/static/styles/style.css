@@ -1,7 +1,29 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
 ul{
     list-style-type: none;
 }
 
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    text-decoration: none;
+}
+
+nav li {
+    text-decoration: none;
+    padding: 2rem 5rem;
+    font-size: 1.2rem;
+}
+
 .posts{
     padding: 5%;
+}
+.bold{
+    background-color: red;
 }

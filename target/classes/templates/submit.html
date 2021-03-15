@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="Fragments/head.html(pageTitle='Kattenetværket - Create new post')"></head>
+
 <body>
+
+<header th:replace="Fragments/header.html"></header>
+
 <form method="post" action="/new-post">
     <label for="title">Title</label>
     <input type="text" name="title" id="title" placeholder="title">
@@ -23,6 +25,8 @@
 
     <button type="submit">Post</button>
 </form>
+
+<footer th:replace="Fragments/footer.html"></footer>
 
 </body>
 </html>
