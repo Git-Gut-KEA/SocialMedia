@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
 <head th:replace="Fragments/head.html(pageTitle='Kattenetværket - Dashboard')"></head>
 
 <body>
-
 <header th:replace="Fragments/header.html(currentPage = 'dashboard')"></header>
-
-        <ul>
-            <div th:each="submit: ${submits}" class="posts">
-                <li th:text="${submit.title}"></li>
-                <li th:text="${submit.content}"></li>
-                <li th:text="${submit.numberOfCats}"></li>
-                <li th:text="${submit.date}"></li>
-                <li th:text="${submit.visibility}"></li>
-            </div>
-        </ul>
-
+    <ul>
+        <div th:each="submit: ${submits}" class="posts">
+            <li th:text="${submit.title}"></li>
+            <li th:text="${submit.content}"></li>
+            <li th:text="${submit.numberOfCats}"></li>
+            <li th:text="${submit.date}"></li>
+            <li th:text="${submit.visibility}"></li>
+        </div>
+    </ul>
 
 <footer th:replace="Fragments/footer.html"></footer>
-
 </body>
 </html>

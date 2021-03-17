@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
 <head th:replace="Fragments/head.html(pageTitle='Kattenetværket - Success')"></head>
 
 <body>
-
 <header th:replace="Fragments/header.html"></header>
 
 <h1>Success!</h1>
-
 <ul>
     <div th:each="submit: ${latestSubmit}" class="posts">
         <li th:text="${submit.title}"></li>
@@ -24,6 +21,5 @@
 </ul>
 
 <footer th:replace="Fragments/footer.html"></footer>
-
 </body>
 </html>
