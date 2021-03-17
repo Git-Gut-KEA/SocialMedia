@@ -1,29 +1,100 @@
-body{
-    padding: 0px;
-    margin: 0px;
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-ul{
-    list-style-type: none;
-}
+nav{
+    background-color:rgba(29, 25, 25, 0.253);
+    width: 100vw;
 
-nav ul {
+}
+.nav-links{
     display: flex;
+    justify-content: center;
     flex-direction: row;
-    justify-items: center;
+
+}
+
+nav li{
+    list-style-type: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+}
+
+nav li:hover{
+    background-color: rgba(121, 118, 118,0.5);
+    border-radius: 5px;
+
+}
+
+a{
+    color: inherit;
     text-decoration: none;
 }
 
-nav li {
-    text-decoration: none;
-    padding: 2rem 5rem;
+.logo{
+    float: left;
+    height:50px;
+    width:100px;
+    object-fit:cover;
+}
+
+.home-content{
+    position: absolute;
+    left: 50%;
+    top:20%;
+    transform: translate(-50%,-20%);
+}
+
+.submit-content h1{
+    position: absolute;
+    left: 50%;
+    top:20%;
+    transform: translate(-50%,-20%);
+}
+
+.submit-content form{
+    position: absolute;
+    left: 50%;
+    top:30%;
+    transform: translate(-50%,-30%);
+}
+
+.submit-content input{
+    border-style: inset;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#date{
+    width: 100%;
+}
+
+.submit-content button{
+    padding: 2px;
     font-size: 1.2rem;
 }
 
 .posts{
-    padding: 5%;
+    padding: 5rem;
 }
-.bold{
-    background-color: red;
+
+
+footer{
+    background-color:rgba(29, 25, 25, 0.253);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type:none;
+    justify-content: space-around;
+    margin-left: 3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }

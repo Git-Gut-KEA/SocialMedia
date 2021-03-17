@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
-<head th:replace="Fragments/head.html(pageTitle='Kattenetværket - Create new post')"></head>
+<head th:replace="Fragments/head.html(pageTitle='Kattenetværket - Submit post')"></head>
 
 <body>
+    <header th:replace="Fragments/header.html"></header>
 
-<header th:replace="Fragments/header.html"></header>
+    <main>
+        <section class="submit-content">
+            <h1>Create a post!</h1>
+            <form method="post" action="/new-post">
 
-<form method="post" action="/new-post">
-    <label for="title">Title</label>
-    <input type="text" name="title" id="title" placeholder="title">
+                <input type="text" name="title" id="title" placeholder="title">
 
-    <label for="content">Content</label>
-    <input type="text" name="content" id="content" placeholder="content">
+                <br>
+                <input type="text" name="content" id="content" placeholder="content">
 
-    <label for="number-of-cats">Number of cats</label>
-    <input type="number" name="number-of-cats" id="number-of-cats" placeholder="number of cats">
+                <br>
+                <input type="number" name="number-of-cats" id="number-of-cats" placeholder="number of cats">
 
-    <label for="date">Date</label>
-    <input type="date" name="date" id="date">
-
-    <input type="radio" name="visibility" value="public">Public
-    <input type="radio" name="visibility" value="private">Private
-
-    <button type="submit">Post</button>
-</form>
+                <br>
+                <input type="date" name="date" id="date">
+                <br>
+                <input type="radio" name="visibility" value="public">Public
+                <input type="radio" name="visibility" value="private">Private
+                <br>
+                <button type="submit">Post</button>
+            </form>
+        </section>
+    </main>
 
 <footer th:replace="Fragments/footer.html"></footer>
-
 </body>
 </html>
